@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,8 +10,42 @@ namespace exemplo01
     {
         public string RA;
         public string nome;
-        public double notaBim1;
-        public double notaBim2;
+        private double notaBim1;
+        private double notaBim2;
+
+        public Estudante ()
+        {
+            nome = "Desconhecido";
+            RA = "000X";
+            notaBim1 = 0.0;
+            notaBim2 = 0.0;
+        }
+
+        public void setNotaBim1(double nota)
+        {
+            if(nota>=0 && nota<=10)
+            {
+                notaBim1 = nota;
+            }
+        }
+
+        public void setNotaBim2(double nota)
+        {
+            if (nota >= 0 && nota <= 10)
+            {
+                notaBim2 = nota;
+            }
+        }
+
+        public double getNotaBim1()
+        {
+            return notaBim1;
+        }
+
+        public double getNotaBim2()
+        {
+            return notaBim2;
+        }
 
         public double media()
         {
@@ -21,6 +55,7 @@ namespace exemplo01
 
             return resultado;
         }
+
         public string relatorio()
         {
             StringBuilder sb = new StringBuilder();
