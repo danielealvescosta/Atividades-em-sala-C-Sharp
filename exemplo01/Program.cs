@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +13,18 @@ namespace exemplo01
             Estudante aluno1;
             aluno1 = new Estudante();
 
-            aluno1.nome = "João Silva";
-            aluno1.RA = "1234X";
-            aluno1.notaBim1 = 8.5;
-            aluno1.notaBim2 = 9.0;
+            /*double nota;
+
+            Console.Write("Digite uma nota 1: ");
+            nota = double.Parse(Console.ReadLine());
+            aluno1.setNotaBim1(nota);
+
+            Console.Write("Digite uma nota 2: ");
+            nota = double.Parse(Console.ReadLine());
+            aluno1.setNotaBim2(nota);*/
 
             Console.WriteLine(aluno1.relatorio());
 
-            Console.WriteLine("Média: {0}", aluno1.media());
         }
     }
 }
